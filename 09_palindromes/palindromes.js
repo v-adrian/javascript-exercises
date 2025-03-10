@@ -1,9 +1,9 @@
-const palindromes = function (str) {
-  const string = Array.from(str.toLowerCase()).filter((letter) =>
-    letter.match("[a-z0-9]")
-  );
-  const reverseString = string.toReversed();
-  return string.every((value, index) => value === reverseString[index]);
+const palindromes = (str) => {
+  const string = Array.from(str.toLowerCase())
+    .filter((letter) => letter.match("[a-z0-9]"))
+    .join("");
+  const reverseString = Array.from(string).toReversed().join("");
+  return string === reverseString;
 };
 
 // Do not edit below this line
